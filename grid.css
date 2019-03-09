@@ -74,18 +74,28 @@ main h2 {
 
 /*DO ALL OF YOUR WORK FOR THIS LAB BELOW THIS POINT */
 
+#wrapper
+{
+	display: grid;
+	grid-gap: 5px;
+	grid-template:
+	"header" auto
+	"nav   " auto
+	"main  " auto
+	"footer" /
+	1fr;
+}
+
 .picture
 {
 	grid-area: picture;
+	width: 100%;
 }
 
-#pictureid
-{
-	display: none;
-}
+
 
 /*screen greater than or equal to 600*/
-@media screen and (min-width: 600px) 
+@media only screen and (min-width: 600px) 
 {
 	body
 	{
@@ -94,24 +104,29 @@ main h2 {
 
 	#wrapper
 	{
-		border: 2px solid black;
+		/*border: 2px solid black;*/
 
 		display: grid; 
+		grid-gap: 3px;
 		grid-template:
-		"picture" 
-		"header" 
-		"nav"   
-		"main" 
-		"footer" ;
-
-		width: 100%;
-		max-width: 600px;
+		"picture" auto
+		"header"  auto
+		"nav"     auto
+		"main"    auto
+		"footer" /
+		1fr;
 	}
 
 	nav ul li
 	{
 		display: inline-block;
 		padding-right: 1em;
+	}
+
+	.picture
+	{
+		display: block;
+		width: 100%;
 	}
 }
 
@@ -124,6 +139,23 @@ main h2 {
 	{
 		background-color: yellow;
 	}
+
+	#wrapper
+	{
+		display: grid; 
+		grid-template:
+		"picture  picture"  auto
+		"nav  header"       auto
+		"nav  main"         auto
+		"footer footer"/  
+		 150px     5fr;
+		 
+	}
+
+	nav ul li
+	{
+		display: block;
+	}
 }
 
 
@@ -134,6 +166,17 @@ main h2 {
 	{
 		background-color: blue;
 	}
+
+	#wrapper
+	{
+		display: grid;
+		grid-gap: 10px;
+		grid-template:
+		"header  picture" auto
+		"nav  main"    auto
+		".  footer"/
+		 150px  1fr;
+	}
 }
 
 
@@ -141,11 +184,6 @@ main h2 {
 /*screen smaller than 600*/
 @media screen and (max-width: 600px)
 {
-	body
-	{
-		background-color: green;
-	}
-
 	#pictureid
 	{
 		display: none;
