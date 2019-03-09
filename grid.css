@@ -1,0 +1,153 @@
+/*DO NOT CHANGE THE BLOCK OF CSS STARTING HERE  */
+/*DO NOT CHANGE THE BLOCK OF CSS STARTING HERE  */
+/*DO NOT CHANGE THE BLOCK OF CSS STARTING HERE  */
+/*DO NOT CHANGE THE BLOCK OF CSS STARTING HERE  */
+/*DO NOT CHANGE THE BLOCK OF CSS STARTING HERE  */
+body {
+	background-color: black;
+}
+
+h1 {
+	margin: 0;
+	text-align: center;
+}
+
+nav a {
+	color: black;
+	text-decoration: none;
+}
+
+header {
+	grid-area: header;
+	background-color: purple;
+	color: white;
+}
+
+nav {
+	grid-area: nav;
+	background-color: lavender;
+	text-align: center;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav ul li {
+	display: block;
+	padding: 5px 0;
+}
+
+footer {
+	grid-area: footer;
+	background-color: #AAFFFF;
+	font-size: small;
+	padding: 3px;
+	text-align: center;
+}
+
+main {
+	grid-area: main;
+	padding: 5px;
+	background-color: #CCFFCC;
+}
+
+main h2 {
+	margin-top: 0;
+}
+
+
+#wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/*DO NOT CHANGE THE BLOCK OF CSS ENDING HERE  */
+/*DO NOT CHANGE THE BLOCK OF CSS ENDING HERE  */
+/*DO NOT CHANGE THE BLOCK OF CSS ENDING HERE  */
+/*DO NOT CHANGE THE BLOCK OF CSS ENDING HERE  */
+/*DO NOT CHANGE THE BLOCK OF CSS ENDING HERE  */
+
+
+
+/*DO ALL OF YOUR WORK FOR THIS LAB BELOW THIS POINT */
+
+.picture
+{
+	grid-area: picture;
+}
+
+#pictureid
+{
+	display: none;
+}
+
+/*screen greater than or equal to 600*/
+@media screen and (min-width: 600px) 
+{
+	body
+	{
+		background-color: white;
+	}
+
+	#wrapper
+	{
+		border: 2px solid black;
+
+		display: grid; 
+		grid-template:
+		"picture" 
+		"header" 
+		"nav"   
+		"main" 
+		"footer" ;
+
+		width: 100%;
+		max-width: 600px;
+	}
+
+	nav ul li
+	{
+		display: inline-block;
+		padding-right: 1em;
+	}
+}
+
+
+
+/*screen greater than or equal to 800*/
+@media screen and (min-width: 800px)
+{
+	body
+	{
+		background-color: yellow;
+	}
+}
+
+
+/*screen greater than or equal to 1000*/
+@media screen and (min-width: 1000px)
+{
+	body
+	{
+		background-color: blue;
+	}
+}
+
+
+
+/*screen smaller than 600*/
+@media screen and (max-width: 600px)
+{
+	body
+	{
+		background-color: green;
+	}
+
+	#pictureid
+	{
+		display: none;
+	}
+}
