@@ -88,8 +88,13 @@ main h2 {
 
 .picture img
 {
-	grid-area: picture;
+	
 	width: 100%;
+}
+
+.picture 
+{
+	grid-area: picture;
 }
 
 
@@ -123,11 +128,6 @@ main h2 {
 		padding-right: 1em;
 	}
 
-	.picture img
-	{
-		display: block;
-		width: 100%;
-	}
 }
 
 
@@ -144,11 +144,11 @@ main h2 {
 	{
 		display: grid; 
 		grid-template:
-		"picture  picture"  auto
+		"picture picture"  auto
 		"nav  header"       auto
 		"nav  main"         auto
 		"footer footer" /
-		 1fr   6fr;  
+		 150px   6fr;  
 	}
 
 	nav ul li
